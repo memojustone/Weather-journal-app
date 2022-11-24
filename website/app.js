@@ -3,7 +3,7 @@ const baseUrl = "https://api.openweathermap.org/data/2.5/weather";
 const apiKey = "e795b1de27b891a5319e56d073ded2ab";
 
 let d = new Date();
-let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
+let newDate = d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
 let userInfo = document.getElementById("userInfo");
 
 // Event listener to add function to existing HTML DOM element
@@ -36,7 +36,9 @@ function performAction(e) {
 
 /* Function to GET Web API Data*/
 const getWeather = async (baseUrl, zipCode, apiKey) => {
-  const res = await fetch(`${baseUrl}?q=${zipCode}&appid=${apiKey}`);
+  const res = await fetch(
+    `${baseUrl}?q=${zipCode}&appid=${apiKey}&units=metric`
+  );
   try {
     // data equals to the result of fetch function
     const data = await res.json();
@@ -75,10 +77,10 @@ const updateWeather = async () => {
     const Data = await request.json();
     console.log(Data);
     // update new entry values
-    document.getElementById("date").innerText = "Date : " + Data.date;
-    document.getElementById("temp").innerText =
+    document.getElementById("date").innerHTML = "Date : " + Data.date;
+    document.getElementById("temp").innerHTML =
       "Temp : " + Data.temp + " degree C";
-    document.getElementById("content").innerText = "Feeling : " + Data.content;
+    document.getElementById("content").innerHTML = "Feeling : " + Data.content;
   } catch (error) {
     console.log("error", error);
   }
