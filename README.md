@@ -2,12 +2,13 @@
 
 ## Overview
 
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI.
+- I made some modifying to HTML and CSS.
+- asynchronous web app that uses Web API and user data to update the UI.
+- I added a alert to display the error message.
 
-## Instructions
+## Sources
 
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+- https://openweathermap.org/current#zip
 
-## Extras
-
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+**© Udacity - Modified By Youssef Ragab.**
