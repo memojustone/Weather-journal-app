@@ -10,5 +10,6 @@
 
 - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 - https://openweathermap.org/current#zip
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 **© Udacity - Modified By Youssef Ragab.**
